@@ -1,0 +1,33 @@
+{
+  "employee": [
+    {
+      "id": 1,
+      "name": "John",
+      "email": "john@example.com"
+    },
+    {
+      "name": "Joshua",
+      "email": "florestajoshua65@gmail.com",
+      "phone": "awdawd",
+      "active": true,
+      "dateTime": "0003-03-12T22:31",
+      "id": 2
+    },
+    {
+      "name": "",
+      "email": "",
+      "phone": "",
+      "active": true,
+      "dateTime": "",
+      "id": 3
+    },
+    {
+      "name": "Joshua",
+      "email": "florestajoshua65@gmail.com",
+      "phone": "213123",
+      "active": true,
+      "dateTime": "32324-12-31T03:23",
+      "id": 4
+    }
+  ]
+}
