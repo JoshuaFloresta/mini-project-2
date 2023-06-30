@@ -7,6 +7,7 @@ import EmpEdit from "./EmpEdit";
 import AboutPage from './About';
 import Home from "./Home";
 import BlogSection from "./components/BlogSection";
+import CycleTracker from "./components/PeriodCalculator";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/employee/detail/:empid" element={<EmpDetail />} />
           <Route path="/employee/edit/:empid" element={<EmpEdit />} />
           <Route path="/blogsec" element={<BlogSection />} />
+          <Route path="/cycletracker" element={<CycleTracker />} />
         </Routes>
       </BrowserRouter>
     </div>
