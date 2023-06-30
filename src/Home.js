@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import './index.css'
 import Footer from './components/Footer';
+import BlogSection from './components/BlogSection';
 
 const HomePage = () => {
   return (
@@ -18,7 +19,7 @@ const HomePage = () => {
     <div className="flex items-center justify-center h-screen bg-gray-50">
         <h1>The #1 period and ovulation tracker worldwide</h1>
     </div>
-
+    <BlogSection/>
      <Footer/>
      </div>
   );

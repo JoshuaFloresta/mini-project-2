@@ -1,66 +1,76 @@
+'use client';
 import React from 'react';
+import { Button, Card } from 'flowbite-react';
+import { HiOutlineArrowRight } from 'react-icons/hi';
+import './Blog.css';
+import Navbar from './Navbar.js';
 
 const blogsData = [
   {
     id: 1,
-    title: 'Habits That Could Be The Reason For Delayed Menstrual Cycle',
-    content:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, tenetur?',
-    url:
-      'https://www.ujaas.in/blogs/delayed-period-the-harmful-habits-that-affect-menstrual-cycle',
-    image: '/my-blog-app/public/images/periodDelay.jpg'
-  },
-  {
-    id: 2,
-    title: 'How to Explain or Have an Open Conversation with a Child about Menstruation?',
+    title: 'Talk with your Child',
     content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, nulla.',
     url:
       'https://www.ujaas.in/blogs/how-to-explain-or-have-an-open-conversation-with-a-child-about-menstruation-2',
-    image: '/my-blog-app/public/images/TalkwithDaughter.jpg'
+    image: '/images/Talk about Menstrual with Children.png'
   },
   { 
-    id: 3,
+    id: 2,
     title: 'Maternal Health',
     content:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, tenetur?',
     url: 'https://philippines.unfpa.org/en/topics/maternal-health-3',
-    image: '/my-blog-app/public/images/MaternalHealth.jpg'
+    image: '/images/Mama Health.png'
   },
   {
-    id: 4,
+    id: 3,
     title: 'Preventing Teenage Pregnancy',
     content:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio, ea?',
     url: 'https://www.cdc.gov/vitalsigns/larc/index.html',
-    image:'/my-blog-app/public/images/TeenagePregnancy.jpg'
+    image:'/images/Teenager Pregnancy.png'
   },
 ];
 
 const BlogSection = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-      {blogsData.map((blog) => (
-        <div key={blog.id}>
-          <div className="card">
-            <div
-              className="card-image"
-              style={{ backgroundImage: `url(${blog.image})` }}
-            ></div>
-            <div className="card-content p-4">
-              <h3 className="card-title text-lg font-bold mb-2">{blog.title}</h3>
-              <p className="card-text">{blog.content}</p>
-              <a
-                href={blog.url}
-                className="btn btn-primary mt-4 inline-block px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Read More
-              </a>
-            </div>
+    <div>
+      <Navbar />
+        <div className='blog-section'>
+        <div className="container mx-auto p-4 flex flex-col items-center lg:w-3/4">
+        <h1 className="text-3xl font-bold mb-10">Menstrual Health Blog</h1>
+        <div className='card-grid' style={{ margin: '0 -10px' }}>
+  {blogsData.map((blog) => (
+    <Card imgSrc={blog.image} key={blog.id} style={{ marginBottom: '20px' }}>
+      <div className="mt-4" style={{ padding: '10px' }}>
+        <h3 className="text-xl font-bold mb-2">{blog.title}</h3>
+        <p className="text-gray-700">{blog.content}</p>
+
+
+
+
+        <Button
+          href={blog.url}
+          gradientMonochrome="pink"
+          target="_blank"
+          rel="noopener noreferrer"
+          pill
+          style={{ marginTop: '10px' }}
+        >
+          Read More <HiOutlineArrowRight className="ml-2 h-5 w-5" />
+        </Button>
+      </div>
+    </Card>
+  ))}
+</div>
+
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <Button gradientMonochrome="pink" pill style={{ marginTop: '40px' }} size="xl">
+                  Explore Health Library
+              </Button>
           </div>
         </div>
-      ))}
+        </div>
     </div>
   );
 };

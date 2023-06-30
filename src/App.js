@@ -6,6 +6,7 @@ import EmpDetail from "./EmpDetail";
 import EmpEdit from "./EmpEdit";
 import AboutPage from './About';
 import Home from "./Home";
+import BlogSection from "./components/BlogSection";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/create" element={<EmpCreate />} />
           <Route path="/employee/detail/:empid" element={<EmpDetail />} />
           <Route path="/employee/edit/:empid" element={<EmpEdit />} />
+          <Route path="/blogsec" element={<BlogSection />} />
         </Routes>
       </BrowserRouter>
     </div>
