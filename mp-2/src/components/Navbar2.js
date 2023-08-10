@@ -24,21 +24,21 @@ const Navbar = () => {
           <div className="ml-10 flex space-x-4">
             <Link
               to="/health"
-              className="text-black    px-3 py-2 rounded-md text-sm font-medium"
+              className="text-black p-1 rounded-md text-sm font-medium "
               id="links"
             >
               Health Libraries
             </Link>
             <Link
               to="/calculator"
-              className="text-black    px-3 py-2 rounded-md text-sm font-medium"
+              className="text-black p-1 rounded-md text-sm font-medium"
               id="links"
             >
               Calculators
             </Link>
             <Link
               to="/calendar"
-              className="text-black    px-3 py-2 rounded-md text-sm font-medium"
+              className="text-black p-1 rounded-md text-sm font-medium"
               id="links"
             >
               Calendar
@@ -57,13 +57,13 @@ const Navbar = () => {
       <div className="flex align-middle ">
         <Link
           to="/login"
-          className="hidden lg:inline text-black    px-3 py-2 mt-2 rounded-md text-sm font-medium"
+          className="hidden lg:inline text-black   px-3 py-2 mt-2 rounded-md text-sm font-medium"
           id="links"
         >
           Manage Subscription
         </Link>
         <button
-          className="hidden md:block lg:block p-2 lg:p-4 rounded-full text-white"
+          className="hidden md:block lg:block p-3 whitespace-nowrap lg:p-4 rounded-full text-white md:text-sm lg:text-lg"
           style={{ backgroundColor: "#7936EB" }}
         >
           Try App Today
