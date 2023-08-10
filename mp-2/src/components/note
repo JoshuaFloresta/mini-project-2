@@ -1,0 +1,125 @@
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { Navigate } from "react-router-dom";
+
+const EmpEdit = ({ closeModal, schedId }) => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [date, setDate] = useState("");
+  const [time, setTime] = useState("");
+  const [text, setText] = useState("");
+  const [modalVisible, setModalVisible] = useState(true);
+
+  useEffect(() => {
+    fetchScheduleData();
+  }, [schedId]);
+
+  const fetchScheduleData = () => {
+    axios
+      .get(`http://localhost:8000/schedule/${schedId}`)
+      .then((res) => {
+        const { name, email, date, time, text  } = res.data;
+        setName(name);
+        setEmail(email);
+        setDate(date);
+        setTime(time);
+        setText(text);
+
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  
+    const SchedData = {  name, email, date, time ,text };
+  
+    axios
+      .put(`http://localhost:8000/schedule/${schedId}`, SchedData, {
+        headers: { "Content-Type": "application/json" },
+      })
+      .then((res) => {
+        alert("Saved successfully.");
+        setModalVisible(false); // Close the modal
+        window.location.reload(); // Reload the page
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  };
+  
+
+  const handleClose = () => {
+    closeModal();
+  };
+
+  return (
+    <div className={`modal ${modalVisible ? "show" : ""}`}>
+      <div className="modal-dialog">
+        <div className="modal-content">
+          <div className="modal-header">
+            <h2 className="modal-title">Employee Edit</h2>
+          </div>
+          <div className="modal-body">
+            <form onSubmit={handleSubmit}>
+              <div className="form-group">
+                <label>ID</label>
+              </div>
+              <div className="form-group">
+                <label>Name</label>
+                <input
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className="form-control"
+                />
+              </div>
+              <div className="form-group">
+                <label>Email</label>
+                <input
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="form-control"
+                />
+              </div>
+              <div className="form-group">
+                <label>Date</label>
+                <input
+                  value={date}
+                  onChange={(e) => setDate(e.target.value)}
+                  className="form-control"
+                />
+              </div>
+              <div className="form-group">
+                <div className="form-check">
+                  <input
+                    type="checkbox"
+                    className="form-check-input"
+                    checked={time}
+                    onChange={(e) => setTime(e.target.time)}
+                  />
+                  <label className="form-check-label">Is Active</label>
+                </div>
+              </div>
+              <div className="modal-footer">a
+                <button type="submit" className="btn btn-success">
+                  Save
+                </button>
+                <button
+                  type="button"
+                  className="btn btn-secondary"
+                  onClick={handleClose}
+                >
+                  Close
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default EmpEdit;

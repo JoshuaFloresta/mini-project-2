@@ -1,0 +1,6 @@
+//npx json-server --watch db.json --port 8000
+//npm install react-focus-lock
+//npm install react-icons --save
+
+//npm install react-intersection-observer
+//npm install formik yup

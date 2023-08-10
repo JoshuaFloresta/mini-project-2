@@ -1,0 +1,28 @@
+{
+  "schedule": [
+    {
+      "name": "Ultra Sound ",
+      "email": "florestajoshua65@gmail.com",
+      "date": "2023-12-12",
+      "time": "12:20",
+      "text": "Appointment with doctor in Manila",
+      "id": 1
+    },
+    {
+      "name": "Monthly Checkup",
+      "email": "example@gmail.com",
+      "text": "monthly check up at Tondo, Manila",
+      "date": "2023-02-12",
+      "time": "16:30",
+      "id": 2
+    },
+    {
+      "name": "DOCTOR'S APPOINTMENT 2",
+      "email": "example@gmail.com",
+      "date": "2024-06-30",
+      "time": "20:20",
+      "text": "start of ovulation cycle",
+      "id": 4
+    }
+  ]
+}

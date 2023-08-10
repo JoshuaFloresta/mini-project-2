@@ -1,0 +1,87 @@
+#links:hover{
+    color: #7936EB;
+}
+
+.container {
+    position: relative;
+    width: 50%;
+    z-index: 1;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    z-index: 1000;
+    width: 35%;
+  }
+
+  #text {
+    height: 75%;
+    width: 90%;
+  }
+  
+
+/* inputs */
+.input {
+  width: 90%;
+  height: 35px;
+  background-color: #05060f0a;
+  border-radius: .5rem;
+  padding: 0 1rem;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s,background .2s cubic-bezier(.25,.01,.25,1) 0s;
+}
+
+.label {
+  display: block;
+  margin-bottom: .3rem;
+  font-size: .9rem;
+  font-weight: bold;
+  color: #05060f99;
+  transition: color .3s cubic-bezier(.25,.01,.25,1) 0s;
+}
+
+.input:hover, .input:focus, .input-group:hover .input {
+  outline: none;
+  border-color: #05060f;
+}
+
+.input-group:hover .label, .input:focus {
+  color: #05060fc2;
+}
+
+@media (min-width: 356px) and (max-width: 600px) {
+  .modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    z-index: 1000;
+    width:  85%;
+  }
+}
+
+@media (min-width: 601px)  and (max-width:900){
+  .modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    z-index: 1000;
+    width:  85%;
+  }
+}
+

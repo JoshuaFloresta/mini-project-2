@@ -1,0 +1,91 @@
+.input {
+    width: 90%;
+    height: 44px;
+    background-color: #05060f0a;
+    border-radius: .5rem;
+    padding: 0 1rem;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s,background .2s cubic-bezier(.25,.01,.25,1) 0s;
+  }
+
+  .inputName {
+    width: 90%;
+    height: 44px;
+    background-color: #05060f0a;
+    border-radius: .5rem;
+    padding: 0 1rem;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s,background .2s cubic-bezier(.25,.01,.25,1) 0s;
+  }
+  
+  
+  .input:hover, .input:focus, .input-group:hover .input {
+    outline: none;
+    border-color: #05060f;
+  }
+  
+    
+  .inputName:hover, .inputName:focus, .input-group:hover .inputName {
+    outline: none;
+    border-color: #05060f;
+  }
+  
+
+  .input-group:hover .label, .input:focus {
+    color: #05060fc2;
+  }
+
+  .dateInput {
+    width: 100%;
+    height: 44px;
+    background-color: #d9dadf0a;
+    border-radius: .5rem;
+    padding: 0 1rem;
+    border: 1px solid gray;
+    font-size: 1rem;
+    transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s,background .2s cubic-bezier(.25,.01,.25,1) 0s;
+  }
+
+
+
+
+  .result-block {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+  }
+  
+  .result-label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  
+  
+  .cycleInput {
+    width: 100%;
+    height: 44px;
+    background-color: #d9dadf0a;
+    border-radius: .5rem;
+    padding: 0 1rem;
+    border: 1px solid gray;
+    transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, color .3s cubic-bezier(.25,.01,.25,1) 0s,background .2s cubic-bezier(.25,.01,.25,1) 0s;
+  }
+
+  @media (max-width: 600px) {
+    .modal{
+      min-width: 300px;
+    }
+  }
+  
+  
+  @media (min-width: 601px) {
+    .modal{
+      min-width: 450px;
+    }
+  }
+  
